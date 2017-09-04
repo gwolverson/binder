@@ -48,7 +48,7 @@ switch(args[0]) {
         optionSet("dir", options.dir);
         serve(options.dir);
         break;
-    case "publish":
+    case "publish-quest":
         optionSet("dir", options.dir);
         publish(options.dir);
         break;
@@ -63,7 +63,7 @@ function usage(){
   console.log("binder add --skill=<name> (--dir <path>)");
   console.log("binder remove --skill=<name> (--dir <path>)");
   console.log("binder serve (--dir <path>)");
-  console.log("binder publish (--dir <path>)");
+  console.log("binder publish-quest (--dir <path>)");
   shell.exit(0);
 }
 
@@ -113,7 +113,7 @@ function serve(path){
 }
 
 function publish(path){
-    console.log("Publish Quest");
+    console.log("Publishing Quest locally");
     shell.cd(path);
     publisher(path);
 }
